@@ -1,8 +1,20 @@
 fn main() {
     println!("Hello, world!");
 }
+
 // $5 + $5 = $10
 // $5 + £5 = $15 if 2:1 rate
+
+struct Dollar {
+    amount: i32,
+}
+
+impl Dollar {
+    pub(crate) fn add(&self, p0: i32) -> Dollar {
+        Dollar { amount: self.amount + p0 }
+    }
+}
+
 #[cfg(test)]
 #[test]
 fn test_addition() {
