@@ -1,5 +1,7 @@
+mod cli;
+
 fn main() {
-    println!("Hello, world!");
+    cli::run_cli(std::io::stdout());
 }
 
 // $5 + $5 = $10
